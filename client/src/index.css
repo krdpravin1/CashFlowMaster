@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(248, 50%, 98%);
+  --foreground: hsl(210, 25%, 7.8431%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(210, 25%, 7.8431%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(210, 25%, 7.8431%);
+  --primary: hsl(217, 79%, 58%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(159, 100%, 34%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(240, 1.9608%, 90%);
+  --muted-foreground: hsl(210, 25%, 7.8431%);
+  --accent: hsl(1, 82%, 56%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(1, 82%, 56%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(201.4286, 30.4348%, 90.9804%);
+  --input: hsl(200, 23.0769%, 97.4510%);
+  --ring: hsl(217, 79%, 58%);
+  --chart-1: hsl(217, 79%, 58%);
+  --chart-2: hsl(159, 100%, 34%);
+  --chart-3: hsl(39, 92%, 56%);
+  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
+  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
+  --sidebar: hsl(0, 0%, 100%);
+  --sidebar-foreground: hsl(210, 25%, 7.8431%);
+  --sidebar-primary: hsl(217, 79%, 58%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(211.5789, 51.3514%, 92.7451%);
+  --sidebar-accent-foreground: hsl(217, 79%, 58%);
+  --sidebar-border: hsl(205.0000, 25.0000%, 90.5882%);
+  --sidebar-ring: hsl(217, 79%, 58%);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 0.5rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00), 0px 1px 2px -1px hsl(217, 79%, 58% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00), 0px 1px 2px -1px hsl(217, 79%, 58% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00), 0px 2px 4px -1px hsl(217, 79%, 58% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00), 0px 4px 6px -1px hsl(217, 79%, 58% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00), 0px 8px 10px -1px hsl(217, 79%, 58% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+  
+  /* Custom ExpenseTracker colors */
+  --expense-primary: hsl(217, 79%, 58%);
+  --expense-secondary: hsl(159, 100%, 34%);
+  --expense-accent: hsl(1, 82%, 56%);
+  --expense-warning: hsl(39, 92%, 56%);
+  --expense-surface: hsl(0, 0%, 100%);
+  --expense-background: hsl(248, 50%, 98%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 0%);
+  --foreground: hsl(200, 6.6667%, 91.1765%);
+  --card: hsl(228, 9.8039%, 10%);
+  --card-foreground: hsl(0, 0%, 85.0980%);
+  --popover: hsl(0, 0%, 0%);
+  --popover-foreground: hsl(200, 6.6667%, 91.1765%);
+  --primary: hsl(217, 79%, 58%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(195.0000, 15.3846%, 94.9020%);
+  --secondary-foreground: hsl(210, 25%, 7.8431%);
+  --muted: hsl(0, 0%, 9.4118%);
+  --muted-foreground: hsl(210, 3.3898%, 46.2745%);
+  --accent: hsl(205.7143, 70%, 7.8431%);
+  --accent-foreground: hsl(217, 79%, 58%);
+  --destructive: hsl(1, 82%, 56%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(210, 5.2632%, 14.9020%);
+  --input: hsl(207.6923, 27.6596%, 18.4314%);
+  --ring: hsl(217, 79%, 58%);
+  --chart-1: hsl(217, 79%, 58%);
+  --chart-2: hsl(159, 100%, 34%);
+  --chart-3: hsl(39, 92%, 56%);
+  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
+  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
+  --sidebar: hsl(228, 9.8039%, 10%);
+  --sidebar-foreground: hsl(0, 0%, 85.0980%);
+  --sidebar-primary: hsl(217, 79%, 58%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(205.7143, 70%, 7.8431%);
+  --sidebar-accent-foreground: hsl(217, 79%, 58%);
+  --sidebar-border: hsl(205.7143, 15.7895%, 26.0784%);
+  --sidebar-ring: hsl(217, 79%, 58%);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 0.5rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00), 0px 1px 2px -1px hsl(217, 79%, 58% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00), 0px 1px 2px -1px hsl(217, 79%, 58% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00), 0px 2px 4px -1px hsl(217, 79%, 58% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00), 0px 4px 6px -1px hsl(217, 79%, 58% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00), 0px 8px 10px -1px hsl(217, 79%, 58% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(217, 79%, 58% / 0.00);
+
+  /* Custom ExpenseTracker colors for dark mode */
+  --expense-primary: hsl(217, 79%, 58%);
+  --expense-secondary: hsl(159, 100%, 34%);
+  --expense-accent: hsl(1, 82%, 56%);
+  --expense-warning: hsl(39, 92%, 56%);
+  --expense-surface: hsl(228, 9.8039%, 10%);
+  --expense-background: hsl(0, 0%, 0%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom utility classes for ExpenseTracker theme */
+@layer utilities {
+  .bg-expense-primary {
+    background-color: var(--expense-primary);
+  }
+  
+  .bg-expense-secondary {
+    background-color: var(--expense-secondary);
+  }
+  
+  .bg-expense-accent {
+    background-color: var(--expense-accent);
+  }
+  
+  .bg-expense-warning {
+    background-color: var(--expense-warning);
+  }
+  
+  .bg-expense-surface {
+    background-color: var(--expense-surface);
+  }
+  
+  .bg-expense-background {
+    background-color: var(--expense-background);
+  }
+  
+  .text-expense-primary {
+    color: var(--expense-primary);
+  }
+  
+  .text-expense-secondary {
+    color: var(--expense-secondary);
+  }
+  
+  .text-expense-accent {
+    color: var(--expense-accent);
+  }
+  
+  .text-expense-warning {
+    color: var(--expense-warning);
+  }
+  
+  /* Enhanced visual styles */
+  .glass-card {
+    @apply backdrop-blur-md bg-white/90 border border-white/20 shadow-xl;
+  }
+  
+  .glass-card-dark {
+    @apply backdrop-blur-md bg-black/10 border border-white/10 shadow-xl;
+  }
+  
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(217, 79%, 58%) 0%, hsl(217, 79%, 68%) 100%);
+  }
+  
+  .gradient-secondary {
+    background: linear-gradient(135deg, hsl(159, 100%, 34%) 0%, hsl(159, 100%, 44%) 100%);
+  }
+  
+  .gradient-accent {
+    background: linear-gradient(135deg, hsl(1, 82%, 56%) 0%, hsl(1, 82%, 66%) 100%);
+  }
+  
+  .gradient-surface {
+    background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(220, 15%, 98%) 100%);
+  }
+  
+  .text-gradient-primary {
+    background: linear-gradient(135deg, hsl(217, 79%, 58%) 0%, hsl(217, 79%, 68%) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .shadow-expense {
+    box-shadow: 0 4px 20px rgba(56, 139, 253, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-expense-lg {
+    box-shadow: 0 10px 40px rgba(56, 139, 253, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(56, 139, 253, 0.25), 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
